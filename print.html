@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Numerical Methods for The Impatient</title>
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="root-finding/index.html"><strong aria-hidden="true">1.</strong> Root Finding Methods</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="root-finding/bisection.html"><strong aria-hidden="true">1.1.</strong> Bisection Method</a></li><li class="chapter-item expanded "><a href="root-finding/secant.html"><strong aria-hidden="true">1.2.</strong> Secant Method</a></li><li class="chapter-item expanded "><a href="root-finding/false-position.html"><strong aria-hidden="true">1.3.</strong> False Position Method</a></li><li class="chapter-item expanded "><a href="root-finding/nr.html"><strong aria-hidden="true">1.4.</strong> Newton-Raphson</a></li></ol></li><li class="chapter-item expanded "><a href="interpolation/index.html"><strong aria-hidden="true">2.</strong> Interpolation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="interpolation/lagrange.html"><strong aria-hidden="true">2.1.</strong> Lagrange Interpolation</a></li><li class="chapter-item expanded "><a href="interpolation/cubic-splines.html"><strong aria-hidden="true">2.2.</strong> Cubic Splines</a></li><li class="chapter-item expanded "><a href="interpolation/hermite.html"><strong aria-hidden="true">2.3.</strong> Hermite Interpolation</a></li></ol></li><li class="chapter-item expanded "><a href="lin-alg/index.html"><strong aria-hidden="true">3.</strong> Linear Algebra</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lin-alg/gaussian-elimination.html"><strong aria-hidden="true">3.1.</strong> Gaussian Elimination</a></li><li class="chapter-item expanded "><a href="lin-alg/matrix-invert/index.html"><strong aria-hidden="true">3.2.</strong> Matrix Inversion</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lin-alg/matrix-invert/analytical-invert.html"><strong aria-hidden="true">3.2.1.</strong> Analytical Method</a></li><li class="chapter-item expanded "><a href="lin-alg/matrix-invert/gauss-invert.html"><strong aria-hidden="true">3.2.2.</strong> Using Gaussian Elimination</a></li><li class="chapter-item expanded "><a href="lin-alg/matrix-invert/flv-invert.html"><strong aria-hidden="true">3.2.3.</strong> Faddeev-LeVerrier Algorithm</a></li></ol></li><li class="chapter-item expanded "><a href="lin-alg/lu-decomposition.html"><strong aria-hidden="true">3.3.</strong> LU Decomposition</a></li></ol></li><li class="chapter-item expanded "><a href="lsq/index.html"><strong aria-hidden="true">4.</strong> Least Squares Fitting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lsq/linear.html"><strong aria-hidden="true">4.1.</strong> Linear Regression</a></li><li class="chapter-item expanded "><a href="lsq/polynomial.html"><strong aria-hidden="true">4.2.</strong> Polynomial Regression</a></li></ol></li><li class="chapter-item expanded "><a href="prob-methods/index.html"><strong aria-hidden="true">5.</strong> Probabilistic Estimation Methods</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="prob-methods/mle.html"><strong aria-hidden="true">5.1.</strong> Maximum Likelihood Estimation</a></li><li class="chapter-item expanded "><a href="prob-methods/mc.html"><strong aria-hidden="true">5.2.</strong> Monte-Carlo Estimation</a></li></ol></li><li class="chapter-item expanded "><a href="num-diff/index.html"><strong aria-hidden="true">6.</strong> Numerical Differentiation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="num-diff/differences.html"><strong aria-hidden="true">6.1.</strong> Forward, Backward, Central Differences</a></li><li class="chapter-item expanded "><a href="num-diff/richardson.html"><strong aria-hidden="true">6.2.</strong> Richardson Extrapolation</a></li><li class="chapter-item expanded "><a href="num-diff/rk4.html"><strong aria-hidden="true">6.3.</strong> Runge-Kutta Methods</a></li></ol></li><li class="chapter-item expanded "><a href="num-int/index.html"><strong aria-hidden="true">7.</strong> Numerical Integration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="num-int/composite-rules.html"><strong aria-hidden="true">7.1.</strong> Composite Rules</a></li><li class="chapter-item expanded "><a href="num-int/romberg.html"><strong aria-hidden="true">7.2.</strong> Romberg Integration</a></li><li class="chapter-item expanded "><a href="num-int/gauss-legendre.html"><strong aria-hidden="true">7.3.</strong> Gauss-Legendre Quadrature</a></li></ol></li><li class="chapter-item expanded "><a href="signal-proc/index.html"><strong aria-hidden="true">8.</strong> Signal Processing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="signal-proc/cooley-tukey.html"><strong aria-hidden="true">8.1.</strong> The Fast Fourier Transform</a></li><li class="chapter-item expanded "><a href="signal-proc/autocorr.html"><strong aria-hidden="true">8.2.</strong> Operations with the FFT</a></li></ol></li><li class="chapter-item expanded "><a href="pde/index.html"><strong aria-hidden="true">9.</strong> Partial Differential Equations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pde/ftcs.html"><strong aria-hidden="true">9.1.</strong> FTCS</a></li><li class="chapter-item expanded "><a href="pde/btcs.html"><strong aria-hidden="true">9.2.</strong> BTCS</a></li><li class="chapter-item expanded "><a href="pde/crank-nicolson.html"><strong aria-hidden="true">9.3.</strong> Crank-Nicholson Method</a></li></ol></li><li class="chapter-item expanded "><a href="misc/index.html"><strong aria-hidden="true">10.</strong> Miscellaneous</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="misc/finding-pi.html"><strong aria-hidden="true">10.1.</strong> Finding Pi</a></li><li class="chapter-item expanded "><a href="misc/interp-heaviside.html"><strong aria-hidden="true">10.2.</strong> Interpolating a Heaviside Function</a></li><li class="chapter-item expanded "><a href="misc/exoplanet/index.html"><strong aria-hidden="true">10.3.</strong> Exoplanet Hunting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="misc/exoplanet/keplerian-params-rv-profile.html"><strong aria-hidden="true">10.3.1.</strong> Effect of Keplerian Parameters on Radial Velocity Profile</a></li><li class="chapter-item expanded "><a href="misc/exoplanet/inclination-transit-duration.html"><strong aria-hidden="true">10.3.2.</strong> Effect of Inclination on Transit Duration</a></li></ol></li><li class="chapter-item expanded "><a href="misc/spectral/index.html"><strong aria-hidden="true">10.4.</strong> Spectral Analysis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="misc/spectral/eq-width.html"><strong aria-hidden="true">10.4.1.</strong> Equivalent Width</a></li><li class="chapter-item expanded "><a href="misc/spectral/cog.html"><strong aria-hidden="true">10.4.2.</strong> Curve of Growth</a></li><li class="chapter-item expanded "><a href="misc/spectral/col-density.html"><strong aria-hidden="true">10.4.3.</strong> Column Density</a></li></ol></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Numerical Methods for The Impatient</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="root-finding-methods"><a class="header" href="#root-finding-methods">Root Finding Methods</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bisection-method"><a class="header" href="#bisection-method">Bisection Method</a></h1>
+<p>The bisection method is one of the simplest root-finding methods around. Owing to its
+simplicity, it is guaranteed to eventually converge, given that the initial problem
+satisfies certain conditions. However, it also is one of the <em>slowest</em> converging
+algorithms due to its relatively mild assumptions.
+It is a good method to try if you want to approximate the root quickly, but then
+refinement of that root is best done using another root-finding routine.</p>
+<h2 id="conditions-for-the-initial-problem"><a class="header" href="#conditions-for-the-initial-problem">Conditions for the Initial Problem</a></h2>
+<p>For bisection to work, it is necessary that the function for which we want the root has
+the following properties:</p>
+<ul>
+<li>The function is continuous.</li>
+<li>There are two values of inputs, say \(a\) and \(b\), for which we know that \(
+f(a) \cdot f(b) &lt; 0 \)</li>
+</ul>
+<p>From these two conditions, using the <a href="https://en.wikipedia.org/wiki/Intermediate_value_theorem">Intermediate Value
+Theorem</a>, we see that the
+interval \((a, b)\) must ‘bracket’ the root that we require.</p>
+<h2 id="motivating-the-algorithm"><a class="header" href="#motivating-the-algorithm">Motivating the Algorithm</a></h2>
+<p>At this point, we know that the root (call it \(x_0\)) lies <em>somewhere</em> in the
+interval \((a, b)\). What we would like to do is to successively shrink this interval
+till we have found the root. The way we shrink the interval is as follows:</p>
+<ol>
+<li>Calculate the midpoint of the interval, \(c\).</li>
+<li>Calculate \(f(c)\).</li>
+<li>If convergence is satisfactory (i.e if \(c - a\) or \(|f(c)|\) is sufficiently
+small), output c and stop.</li>
+<li>If not, examine the sign of \(f(c)\) and replace either \((a, f(a))\) or \((b,
+f(b))\) with \((c, f(c))\) so that there is a zero crossing in the new interval
+and repeat.</li>
+</ol>
+<p>Ideally, this process can go on infinitely but on a computer, we will eventually hit
+what is called the <a href="https://en.wikipedia.org/wiki/Machine_epsilon">machine epsilon</a>,
+\(\epsilon\). The machine epsilon is inherently tied to the fact that computers have
+finite precision, meaning that computers can only store up to a fixed number of
+significant digits. The result of this is that any two numbers which differ by <em>less</em>
+than the machine epsilon will <em>not</em> be distinguishable by the computer. This forms the
+basis for the exit condition in Step 3 above, but more elaborate conditions are also
+used in more complex situations.</p>
+<p>In practice we usually do not desire a precision which is of the order of
+\(\epsilon\), and can tolerate a much higher error. In this case, we simply check if
+\(|c-a|\) or \(|f(c)|\) are smaller than some supplied tolerance value and if true,
+we stop the process. In addition to this provision, it may so happen that the function
+converges so slowly that the algorithm doesn’t reach a precision level that we desire.
+In these cases, we supply an additional parameter called \(N_{max}\) which is the
+maximum number of iterations to carry out, before the main loop body quits.</p>
+<h2 id="the-algorithm-in-code"><a class="header" href="#the-algorithm-in-code">The Algorithm in Code</a></h2>
+<p>The following is a Python snippet illustrating an example implementation of the
+bisection method. Here, <code>f</code> is the function we need to find the root for, <code>a</code> and <code>b</code>
+are the endpoints of the interval such that <code>a &lt; b</code>, and <code>N_MAX</code> is a constant
+for the maximum number of iterations to undertake.</p>
+<pre><code class="language-python">for iter in range(N_MAX):                  # limit iterations
+    c = (a + b) / 2                        # new midpoint
+    if f(c) = 0 or (b - a)/2 &lt; TOL         # exit condition
+        print(f&quot;Solution found, x = {c}&quot;)  # output c
+        break                              # stop iterating
+    iter += 1
+    if f(c) * f(a) &gt; 0 a = c else b = c    # step 4, written differently
+</code></pre>
+<h2 id="epilogue"><a class="header" href="#epilogue">Epilogue</a></h2>
+<p>As we’ve seen above, the bisection method is quite simple in its implementation and
+concept, and works for a wide-variety of functions. However, it can be shown that it
+converges <em>linearly</em>, which is extremely slow if one requires high precision. We use the
+bisection method at all because it is the only method which guarantees an estimate that,
+in the worst-case, will have an absolute error given by the tolerance in the <em>least</em>
+number of iterations when compared to other algorithms.</p>
+<p>That being said, we will see other methods in this chapter which trade off worst-case
+performance for orders-of-magnitude speedup in convergence to the root.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="secant-method"><a class="header" href="#secant-method">Secant Method</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="false-position-method"><a class="header" href="#false-position-method">False Position Method</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="newton-raphson"><a class="header" href="#newton-raphson">Newton-Raphson</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="interpolation"><a class="header" href="#interpolation">Interpolation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lagrange-interpolation"><a class="header" href="#lagrange-interpolation">Lagrange Interpolation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cubic-splines"><a class="header" href="#cubic-splines">Cubic Splines</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hermite-interpolation"><a class="header" href="#hermite-interpolation">Hermite Interpolation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linear-algebra"><a class="header" href="#linear-algebra">Linear Algebra</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gaussian-elimination"><a class="header" href="#gaussian-elimination">Gaussian Elimination</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="matrix-inversion"><a class="header" href="#matrix-inversion">Matrix Inversion</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="analytical-method"><a class="header" href="#analytical-method">Analytical Method</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-gaussian-elimination"><a class="header" href="#using-gaussian-elimination">Using Gaussian Elimination</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="faddeev-leverrier-algorithm"><a class="header" href="#faddeev-leverrier-algorithm">Faddeev-LeVerrier Algorithm</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lu-decomposition"><a class="header" href="#lu-decomposition">LU Decomposition</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="least-squares-fitting"><a class="header" href="#least-squares-fitting">Least Squares Fitting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linear-regression"><a class="header" href="#linear-regression">Linear Regression</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="polynomial-regression"><a class="header" href="#polynomial-regression">Polynomial Regression</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="probabilistic-estimation-methods"><a class="header" href="#probabilistic-estimation-methods">Probabilistic Estimation Methods</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="maximum-likelihood-estimation"><a class="header" href="#maximum-likelihood-estimation">Maximum Likelihood Estimation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="monte-carlo-estimation"><a class="header" href="#monte-carlo-estimation">Monte-Carlo Estimation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="numerical-differentiation"><a class="header" href="#numerical-differentiation">Numerical Differentiation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forward-backward-central-differences"><a class="header" href="#forward-backward-central-differences">Forward, Backward, Central Differences</a></h1>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<p>The concept of numerical differentiation is tied to the concept of the limit of a
+function. Recall that for a continuous function \(f(x)\), the value of the first
+derivative at a point \(x = x_0\) is given by:</p>
+<p>\[
+f^′(x_0) = \lim_{h → 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
+\]</p>
+<p>if this limit exists. Equivalently, we can write this limit as:</p>
+<p>\[
+f^′(x_0) = \lim_{h → 0} \dfrac{f(x_0) - f(x_0 - h)}{h}
+\]</p>
+<p>By the very fact that the function is continuous, these two limits (should they exist)
+will be equal. In the realm of mathematics, \(h\) can be made as small as possible in
+order to compute the derivative, which is unfortunately a task too tedious for computers
+to handle.</p>
+<p>Thus, in order to compute these limits (and by extension the derivative of
+the function) numerically, we notice that the above equations can be written as:</p>
+<p>\[
+f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx}
+\]</p>
+<p>and </p>
+<p>\[
+f^′(x_0) ≈ \dfrac{f(x_0) - f(x_0 - Δx)}{Δx}
+\]</p>
+<p>The former equation is known as the <strong>forward difference</strong>, whereas the latter is the
+<strong>backward difference</strong> equation for the numerical derivative. One can see that these two
+expressions will approximate the derivative quite well, but to actually estimate the
+error, we use the Taylor expansion of the function around \( x = x_0\):</p>
+<p>\[
+f(x_0 + Δx) = f(x_0) + Δx f^′(x_0) + \dfrac{Δx^2}{2} f^{\prime \prime}(x_0) + …
+\]</p>
+<p>Rearranging this gives us the following:</p>
+<p>\[
+f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx} - O(Δx)
+\]</p>
+<p>which shows that the approximation is first-order accurate. A similar result can be
+derived for the backward difference equation as well.</p>
+<h2 id="doing-better"><a class="header" href="#doing-better">Doing Better</a></h2>
+<p>However, in most cases, first-order accuracy is much too error-prone, unless you reduce
+\(Δx\) to miniscule values. Thus, we must do better than this and the way we start is
+by asking what happens when we combine the forward and backward differences ...</p>
+<p>\[
+\begin{equation}
+2 \cdot f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{Δx}
+⇒ f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{2 Δx}
+\end{equation}
+\]</p>
+<p>The result of this combination is that the approximation so produced is <em>second-order
+accurate</em> (this can be checked by using Taylor expansions, as before). This form of the
+first derivative is known as the <strong>central difference</strong>.</p>
+<p>Notice that when comparing the forward/backward and central differences, the former has
+one less function evaluation than the latter (since usually \(f(x_0)\) is a known
+quantity). This is true in general as well, wherein methods with a higher number of
+functional evaluations will exhibit higher-order accuracy (once these evaluations are
+weighted properly).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="richardson-extrapolation"><a class="header" href="#richardson-extrapolation">Richardson Extrapolation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="runge-kutta-methods"><a class="header" href="#runge-kutta-methods">Runge-Kutta Methods</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="numerical-integration"><a class="header" href="#numerical-integration">Numerical Integration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="composite-rules"><a class="header" href="#composite-rules">Composite Rules</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="romberg-integration"><a class="header" href="#romberg-integration">Romberg Integration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gauss-legendre-quadrature"><a class="header" href="#gauss-legendre-quadrature">Gauss-Legendre Quadrature</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="signal-processing"><a class="header" href="#signal-processing">Signal Processing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-fast-fourier-transform"><a class="header" href="#the-fast-fourier-transform">The Fast Fourier Transform</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operations-with-the-fft"><a class="header" href="#operations-with-the-fft">Operations with the FFT</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="partial-differential-equations"><a class="header" href="#partial-differential-equations">Partial Differential Equations</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ftcs"><a class="header" href="#ftcs">FTCS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="btcs"><a class="header" href="#btcs">BTCS</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="crank-nicholson-method"><a class="header" href="#crank-nicholson-method">Crank-Nicholson Method</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="finding-pi"><a class="header" href="#finding-pi">Finding Pi</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="interpolating-a-heaviside-function"><a class="header" href="#interpolating-a-heaviside-function">Interpolating a Heaviside Function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exoplanet-hunting"><a class="header" href="#exoplanet-hunting">Exoplanet Hunting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="effect-of-keplerian-parameters-on-radial-velocity-profile"><a class="header" href="#effect-of-keplerian-parameters-on-radial-velocity-profile">Effect of Keplerian Parameters on Radial Velocity Profile</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="effect-of-inclination-on-transit-duration"><a class="header" href="#effect-of-inclination-on-transit-duration">Effect of Inclination on Transit Duration</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="spectral-analysis"><a class="header" href="#spectral-analysis">Spectral Analysis</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="equivalent-width"><a class="header" href="#equivalent-width">Equivalent Width</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="curve-of-growth"><a class="header" href="#curve-of-growth">Curve of Growth</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="column-density"><a class="header" href="#column-density">Column Density</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+                        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+                
+    </body>
+</html>
