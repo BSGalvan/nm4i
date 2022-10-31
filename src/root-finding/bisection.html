@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Secant Method" href="secant.html" />
@@ -700,41 +702,41 @@ refinement of that root is best done using another root-finding routine.</p>
 the following properties:</p>
 <ul class="simple">
 <li><p>The function is continuous.</p></li>
-<li><p>There are two values of inputs, say \(a\) and \(b\), for which we know that \(
-f(a) \cdot f(b) &lt; 0 \)</p></li>
+<li><p>There are two values of inputs, say <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, for which we know that <span class="math notranslate nohighlight">\(
+f(a) \cdot f(b) &lt; 0 \)</span></p></li>
 </ul>
 <p>From these two conditions, using the <a class="reference external" href="https://en.wikipedia.org/wiki/Intermediate_value_theorem">Intermediate Value
 Theorem</a>, we see that the
-interval \((a, b)\) must ‘bracket’ the root that we require.</p>
+interval <span class="math notranslate nohighlight">\((a, b)\)</span> must ‘bracket’ the root that we require.</p>
 </section>
 <section id="motivating-the-algorithm">
 <h2>Motivating the Algorithm<a class="headerlink" href="#motivating-the-algorithm" title="Permalink to this headline">#</a></h2>
-<p>At this point, we know that the root (call it \(x_0\)) lies <em>somewhere</em> in the
-interval \((a, b)\). What we would like to do is to successively shrink this interval
+<p>At this point, we know that the root (call it <span class="math notranslate nohighlight">\(x_0\)</span>) lies <em>somewhere</em> in the
+interval <span class="math notranslate nohighlight">\((a, b)\)</span>. What we would like to do is to successively shrink this interval
 till we have found the root. The way we shrink the interval is as follows:</p>
 <ol class="simple">
-<li><p>Calculate the midpoint of the interval, \(c\).</p></li>
-<li><p>Calculate \(f(c)\).</p></li>
-<li><p>If convergence is satisfactory (i.e if \(c - a\) or \(|f(c)|\) is sufficiently
+<li><p>Calculate the midpoint of the interval, <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p>Calculate <span class="math notranslate nohighlight">\(f(c)\)</span>.</p></li>
+<li><p>If convergence is satisfactory (i.e if <span class="math notranslate nohighlight">\(c - a\)</span> or <span class="math notranslate nohighlight">\(|f(c)|\)</span> is sufficiently
 small), output c and stop.</p></li>
-<li><p>If not, examine the sign of \(f(c)\) and replace either \((a, f(a))\) or \((b,
-f(b))\) with \((c, f(c))\) so that there is a zero crossing in the new interval
+<li><p>If not, examine the sign of <span class="math notranslate nohighlight">\(f(c)\)</span> and replace either <span class="math notranslate nohighlight">\((a, f(a))\)</span> or <span class="math notranslate nohighlight">\((b,
+f(b))\)</span> with <span class="math notranslate nohighlight">\((c, f(c))\)</span> so that there is a zero crossing in the new interval
 and repeat.</p></li>
 </ol>
 <p>Ideally, this process can go on infinitely but on a computer, we will eventually hit
 what is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_epsilon">machine epsilon</a>,
-\(\epsilon\). The machine epsilon is inherently tied to the fact that computers have
+<span class="math notranslate nohighlight">\(\epsilon\)</span>. The machine epsilon is inherently tied to the fact that computers have
 finite precision, meaning that computers can only store up to a fixed number of
 significant digits. The result of this is that any two numbers which differ by <em>less</em>
 than the machine epsilon will <em>not</em> be distinguishable by the computer. This forms the
 basis for the exit condition in Step 3 above, but more elaborate conditions are also
 used in more complex situations.</p>
 <p>In practice we usually do not desire a precision which is of the order of
-\(\epsilon\), and can tolerate a much higher error. In this case, we simply check if
-\(|c-a|\) or \(|f(c)|\) are smaller than some supplied tolerance value and if true,
+<span class="math notranslate nohighlight">\(\epsilon\)</span>, and can tolerate a much higher error. In this case, we simply check if
+<span class="math notranslate nohighlight">\(|c-a|\)</span> or <span class="math notranslate nohighlight">\(|f(c)|\)</span> are smaller than some supplied tolerance value and if true,
 we stop the process. In addition to this provision, it may so happen that the function
 converges so slowly that the algorithm doesn’t reach a precision level that we desire.
-In these cases, we supply an additional parameter called \(N_{max}\) which is the
+In these cases, we supply an additional parameter called <span class="math notranslate nohighlight">\(N_{max}\)</span> which is the
 maximum number of iterations to carry out, before the main loop body quits.</p>
 </section>
 <section id="the-algorithm-in-code">
