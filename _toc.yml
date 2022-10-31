@@ -1,0 +1,110 @@
+format: jb-book
+root: src/index
+chapters:
+- file: src/interpolation/cubic-splines
+  title: Cubic-splines
+  sections:
+  - file: src/interpolation/hermite
+    title: Hermite
+  - file: src/interpolation/lagrange
+    title: Lagrange
+  - file: src/interpolation/README
+    title: Readme
+- file: src/lin-alg/gaussian-elimination
+  title: Gaussian-elimination
+  sections:
+  - file: src/lin-alg/lu-decomposition
+    title: Lu-decomposition
+  - file: src/lin-alg/README
+    title: Readme
+  - file: src/lin-alg/matrix-invert/analytical-invert
+    title: Analytical-invert
+    sections:
+    - file: src/lin-alg/matrix-invert/flv-invert
+      title: Flv-invert
+    - file: src/lin-alg/matrix-invert/gauss-invert
+      title: Gauss-invert
+    - file: src/lin-alg/matrix-invert/README
+      title: Readme
+- file: src/lsq/linear
+  title: Linear
+  sections:
+  - file: src/lsq/polynomial
+    title: Polynomial
+  - file: src/lsq/README
+    title: Readme
+- file: src/misc/finding-pi
+  title: Finding-pi
+  sections:
+  - file: src/misc/interp-heaviside
+    title: Interp-heaviside
+  - file: src/misc/README
+    title: Readme
+  - file: src/misc/exoplanet/inclination-transit-duration
+    title: Inclination-transit-duration
+    sections:
+    - file: src/misc/exoplanet/keplerian-params-rv-profile
+      title: Keplerian-params-rv-profile
+    - file: src/misc/exoplanet/README
+      title: Readme
+  - file: src/misc/spectral/cog
+    title: Cog
+    sections:
+    - file: src/misc/spectral/col-density
+      title: Col-density
+    - file: src/misc/spectral/eq-width
+      title: Eq-width
+    - file: src/misc/spectral/README
+      title: Readme
+- file: src/num-diff/differences
+  title: Differences
+  sections:
+  - file: src/num-diff/README
+    title: Readme
+  - file: src/num-diff/richardson
+    title: Richardson
+  - file: src/num-diff/rk4
+    title: Rk4
+- file: src/num-int/composite-rules
+  title: src/Composite-rules
+  sections:
+  - file: src/num-int/gauss-legendre
+    title: Gauss-legendre
+  - file: src/num-int/README
+    title: Readme
+  - file: src/num-int/romberg
+    title: Romberg
+- file: src/pde/btcs
+  title: Btcs
+  sections:
+  - file: src/pde/crank-nicolson
+    title: Crank-nicolson
+  - file: src/pde/ftcs
+    title: Ftcs
+  - file: src/pde/README
+    title: Readme
+- file: src/prob-methods/mc
+  title: Mc
+  sections:
+  - file: src/prob-methods/mle
+    title: Mle
+  - file: src/prob-methods/README
+    title: Readme
+- file: src/root-finding/bisection
+  title: Bisection
+  sections:
+  - file: src/root-finding/false-position
+    title: False-position
+  - file: src/root-finding/nr
+    title: Nr
+  - file: src/root-finding/README
+    title: Readme
+  - file: src/root-finding/secant
+    title: Secant
+- file: src/signal-proc/autocorr
+  title: Autocorr
+  sections:
+  - file: src/signal-proc/cooley-tukey
+    title: Cooley-tukey
+  - file: src/signal-proc/README
+    title: Readme
