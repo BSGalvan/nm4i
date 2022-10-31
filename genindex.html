@@ -112,8 +112,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/interpolation/cubic-splines.html">
-   Cubic-splines
+  <a class="reference internal" href="src/root-finding/README.html">
+   Root Finding Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -122,25 +122,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/interpolation/hermite.html">
-     Hermite
+    <a class="reference internal" href="src/root-finding/bisection.html">
+     Bisection Method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/interpolation/lagrange.html">
-     Lagrange
+    <a class="reference internal" href="src/root-finding/secant.html">
+     Secant Method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/interpolation/README.html">
-     Readme
+    <a class="reference internal" href="src/root-finding/false-position.html">
+     False Position Method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/root-finding/nr.html">
+     Newton-Raphson Method
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/lin-alg/gaussian-elimination.html">
-   Gaussian-elimination
+  <a class="reference internal" href="src/interpolation/README.html">
+   Interpolation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -149,69 +154,74 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/lin-alg/lu-decomposition.html">
-     Lu-decomposition
+    <a class="reference internal" href="src/interpolation/lagrange.html">
+     Lagrange Interpolation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/lin-alg/README.html">
-     Readme
+    <a class="reference internal" href="src/interpolation/cubic-splines.html">
+     Cubic Splines
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="src/lin-alg/matrix-invert/analytical-invert.html">
-     Analytical-invert
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/interpolation/hermite.html">
+     Hermite Interpolation
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/lin-alg/matrix-invert/flv-invert.html">
-       Flv-invert
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/lin-alg/matrix-invert/gauss-invert.html">
-       Gauss-invert
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/lin-alg/matrix-invert/README.html">
-       Readme
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/lsq/linear.html">
-   Linear
+  <a class="reference internal" href="src/lin-alg/README.html">
+   Linear Algebra
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/lsq/polynomial.html">
-     Polynomial
+    <a class="reference internal" href="src/lin-alg/gaussian-elimination.html">
+     Gaussian Elimination
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="src/lin-alg/matrix-invert/README.html">
+     Matrix Inversion
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/lin-alg/matrix-invert/analytical-invert.html">
+       Analytical Inversion
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/lin-alg/matrix-invert/gauss-invert.html">
+       Using Gaussian Elimination
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/lin-alg/matrix-invert/flv-invert.html">
+       Faddeev-LeVerrier Algorithm
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/lsq/README.html">
-     Readme
+    <a class="reference internal" href="src/lin-alg/lu-decomposition.html">
+     LU Decomposition
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/misc/finding-pi.html">
-   Finding-pi
+  <a class="reference internal" href="src/lsq/README.html">
+   Least Squares Fitting
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -220,74 +230,69 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/misc/interp-heaviside.html">
-     Interp-heaviside
+    <a class="reference internal" href="src/lsq/linear.html">
+     Linear Regression
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/misc/README.html">
-     Readme
+    <a class="reference internal" href="src/lsq/polynomial.html">
+     Polynomial Regression
     </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="src/misc/exoplanet/inclination-transit-duration.html">
-     Inclination-transit-duration
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/misc/exoplanet/keplerian-params-rv-profile.html">
-       Keplerian-params-rv-profile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/misc/exoplanet/README.html">
-       Readme
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="src/misc/spectral/cog.html">
-     Cog
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/misc/spectral/col-density.html">
-       Col-density
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/misc/spectral/eq-width.html">
-       Eq-width
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="src/misc/spectral/README.html">
-       Readme
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="src/num-diff/differences.html">
-   Forward, Backward, Central Differences
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="src/prob-methods/README.html">
+   Probabilistic Estimation Methods
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/prob-methods/mle.html">
+     Maximum Likelihood Estimation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/prob-methods/mc.html">
+     Monte-Carlo Estimation
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/num-int/composite-rules.html">
-   src/Composite-rules
+  <a class="reference internal" href="src/num-diff/README.html">
+   Numerical Differentiation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/num-diff/differences.html">
+     Forward, Backward, Central Differences
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/num-diff/richardson.html">
+     Richardson Extrapolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/num-diff/rk4.html">
+     Runge-Kutta Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="src/num-int/README.html">
+   Numerical Integration
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -296,25 +301,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/num-int/gauss-legendre.html">
-     Gauss-legendre
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/num-int/README.html">
-     Readme
+    <a class="reference internal" href="src/num-int/composite-rules.html">
+     Composite Rules
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="src/num-int/romberg.html">
-     Romberg
+     Romberg Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/num-int/gauss-legendre.html">
+     Gauss-legendre Quadrature
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/pde/btcs.html">
-   Btcs
+  <a class="reference internal" href="src/signal-proc/README.html">
+   Signal Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
@@ -323,25 +328,20 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/pde/crank-nicolson.html">
-     Crank-nicolson
+    <a class="reference internal" href="src/signal-proc/cooley-tukey.html">
+     The Fast Fourier Transform
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/pde/ftcs.html">
-     Ftcs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/pde/README.html">
-     Readme
+    <a class="reference internal" href="src/signal-proc/autocorr.html">
+     Operations with the FFT
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/prob-methods/mc.html">
-   Mc
+  <a class="reference internal" href="src/pde/README.html">
+   Partial Differential Equations
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -350,20 +350,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/prob-methods/mle.html">
-     Mle
+    <a class="reference internal" href="src/pde/ftcs.html">
+     FTCS
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/prob-methods/README.html">
-     Readme
+    <a class="reference internal" href="src/pde/btcs.html">
+     BTCS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="src/pde/crank-nicolson.html">
+     Crank-Nicolson Method
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/root-finding/bisection.html">
-   Bisection
+  <a class="reference internal" href="src/misc/README.html">
+   Miscellaneous
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
@@ -372,46 +377,63 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/root-finding/false-position.html">
-     False-position
+    <a class="reference internal" href="src/misc/finding-pi.html">
+     Finding Pi
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="src/root-finding/nr.html">
-     Nr
+    <a class="reference internal" href="src/misc/interp-heaviside.html">
+     Interpolating a Heaviside Function
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/root-finding/README.html">
-     Readme
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="src/misc/exoplanet/README.html">
+     Exoplanet Hunting
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/misc/exoplanet/inclination-transit-duration.html">
+       Effect of Keplerian Parameters on Radial Velocity Profile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/misc/exoplanet/keplerian-params-rv-profile.html">
+       Effect of Inclination on Transit Duration
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/root-finding/secant.html">
-     Secant
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="src/misc/spectral/README.html">
+     Spectral Analysis
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="src/signal-proc/autocorr.html">
-   Autocorr
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/signal-proc/cooley-tukey.html">
-     Cooley-tukey
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="src/signal-proc/README.html">
-     Readme
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/misc/spectral/eq-width.html">
+       Equivalent Width
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/misc/spectral/cog.html">
+       Curve of Growth
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="src/misc/spectral/col-density.html">
+       Column Density
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
