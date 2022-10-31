@@ -619,26 +619,14 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Forward, Backward, Central Differences
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-started">
-     Getting Started
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#doing-better">
-     Doing Better
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notice-that-when-comparing-the-forward-backward-and-central-differences-the-former-has">
-   Notice that when comparing the forward/backward and central differences, the former has
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doing-better">
+   Doing Better
   </a>
  </li>
 </ul>
@@ -660,26 +648,14 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Forward, Backward, Central Differences
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-started">
-     Getting Started
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#doing-better">
-     Doing Better
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notice-that-when-comparing-the-forward-backward-and-central-differences-the-former-has">
-   Notice that when comparing the forward/backward and central differences, the former has
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doing-better">
+   Doing Better
   </a>
  </li>
 </ul>
@@ -701,12 +677,12 @@ function. Recall that for a continuous function <span class="math notranslate no
 derivative at a point <span class="math notranslate nohighlight">\(x = x_0\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
 \[
-    f^′(x_0) = \lim_{h → 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
+    f^\prime(x_0) = \lim_{h → 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
 \]</div>
 <p>if this limit exists. Equivalently, we can write this limit as:</p>
 <div class="math notranslate nohighlight">
 \[
-    f^′(x_0) = \lim_{h → 0} \dfrac{f(x_0) - f(x_0 - h)}{h}
+    f^\prime(x_0) = \lim_{h → 0} \dfrac{f(x_0) - f(x_0 - h)}{h}
 \]</div>
 <p>By the very fact that the function is continuous, these two limits (should they exist)
 will be equal. In the realm of mathematics, <span class="math notranslate nohighlight">\(h\)</span> can be made as small as possible in
@@ -716,12 +692,12 @@ to handle.</p>
 the function) numerically, we notice that the above equations can be written as:</p>
 <div class="math notranslate nohighlight">
 \[
-    f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx}
+    f^\prime(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx}
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[
-    f^′(x_0) ≈ \dfrac{f(x_0) - f(x_0 - Δx)}{Δx}
+    f^\prime(x_0) ≈ \dfrac{f(x_0) - f(x_0 - Δx)}{Δx}
 \]</div>
 <p>The former equation is known as the <strong>forward difference</strong>, whereas the latter is the
 <strong>backward difference</strong> equation for the numerical derivative. One can see that these two
@@ -729,12 +705,12 @@ expressions will approximate the derivative quite well, but to actually estimate
 error, we use the Taylor expansion of the function around <span class="math notranslate nohighlight">\( x = x_0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-    f(x_0 + Δx) = f(x_0) + Δx f^′(x_0) + \dfrac{Δx^2}{2} f^{\prime \prime}(x_0) + …
+    f(x_0 + Δx) = f(x_0) + Δx f^\prime(x_0) + \dfrac{Δx^2}{2} f^{\prime \prime}(x_0) + …
 \]</div>
 <p>Rearranging this gives us the following:</p>
 <div class="math notranslate nohighlight">
 \[
-    f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx} - O(Δx)
+    f^\prime(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0)}{Δx} - O(Δx)
 \]</div>
 <p>which shows that the approximation is first-order accurate. A similar result can be
 derived for the backward difference equation as well.</p>
@@ -747,21 +723,19 @@ by asking what happens when we combine the forward and backward differences …<
 <div class="math notranslate nohighlight">
 \[
     \begin{equation}
-        2 \cdot f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{Δx}
-        ⇒ f^′(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{2 Δx}
+        2 \cdot f^\prime(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{Δx}
+        ⇒ f^\prime(x_0) ≈ \dfrac{f(x_0 + Δx) - f(x_0 - Δx)}{2 Δx}
     \end{equation}
 \]</div>
 <p>The result of this combination is that the approximation so produced is <em>second-order
 accurate</em> (this can be checked by using Taylor expansions, as before). This form of the
 first derivative is known as the <strong>central difference</strong>.</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="notice-that-when-comparing-the-forward-backward-and-central-differences-the-former-has">
-<h1>Notice that when comparing the forward/backward and central differences, the former has<a class="headerlink" href="#notice-that-when-comparing-the-forward-backward-and-central-differences-the-former-has" title="Permalink to this headline">#</a></h1>
-<p>one less function evaluation than the latter (since usually <span class="math notranslate nohighlight">\(f(x_0)\)</span> is a known
+<p>Notice that when comparing the forward/backward and central differences, the former has
+one less function evaluation than the latter (since usually <span class="math notranslate nohighlight">\(f(x_0)\)</span> is a known
 quantity). This is true in general as well, wherein methods with a higher number of
 functional evaluations will exhibit higher-order accuracy (once these evaluations are
 weighted properly).</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
