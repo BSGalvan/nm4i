@@ -1,3 +1,4 @@
+furo
 jupyter-book
 matplotlib
 numpy
